@@ -18,6 +18,7 @@ eg VanillaJS, Vue,React,Preact etc
 
 We will be using typescript as the language to better write clean code.
 
+while cloning, phrasekey will be asked. This key will be sent separatly. 
 
 If you are just cloning this repository, the you just need to run the following commands in the
 command line of the folder or in VSCODE
