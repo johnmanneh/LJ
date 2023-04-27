@@ -4,24 +4,26 @@ Getting Started.
 
 If you don't have an existing platform, then you need the following prerequisites
 
-        Node V16 or High
-        VSCODE as Editor
+        NodeJS  V16 or High Installed 
+        A Text editor
 
 
-We create react app with vit
-Vit is a frame work that lets us create any type of JavaScript framework
-eg VanillaJS, Vue,React,Preact etc
+We create react app with VIT. 
+Vit is a framework that lets us create any type of JavaScript framework
+eg VanillaJS,Vue,React,Preact etc
 
+We create a react application with the following commands:
         npm create vite@latest
-        select react
-        select TypeScript
+        select-option :  react
+        select-option :  TypeScript
 
-We will be using typescript as the language to better write clean code.
 
-while cloning, phrasekey will be asked. This key will be sent separatly. 
 
-If you are just cloning this repository, the you just need to run the following commands in the
-command line of the folder or in VSCODE
+For cloning, a separate phasekey will be provided. 
+
+
+After cloning is done, navigate to the desired folder and run these 
+commands
 
         cd /your folder
         npm install ( this install all the third party libraries)
