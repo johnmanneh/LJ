@@ -13,6 +13,7 @@ Vit is a framework that lets us create any type of JavaScript framework
 eg VanillaJS,Vue,React,Preact etc
 
 We create a react application with the following commands:
+
         npm create vite@latest
         select-option :  react
         select-option :  TypeScript
