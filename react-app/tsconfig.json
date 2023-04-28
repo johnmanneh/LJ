@@ -13,7 +13,6 @@
     "noEmit": true,
     "jsx": "react",
     "allowSyntheticDefaultImports":true,
-
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,

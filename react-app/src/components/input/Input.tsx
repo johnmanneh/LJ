@@ -1,13 +1,15 @@
-import React from 'react'
-interface inputProps{
-    handleEvent:(event:string)=>void;
+import React from "react";
+
+interface inputProps {
+  handleEvent: (event: string) => void;
+  value : string;
 }
-function Input({handleEvent}:inputProps) {
-    return (
-        <>
-        <input onChange={(e)=>handleEvent(e.target.value)}/> 
-        </>
-    )
+function Input({ handleEvent,value }: inputProps) {
+  return (
+    <>
+      <input value ={value} onChange={e => handleEvent(e.target.value)} />
+    </>
+  );
 }
 
 export default Input;

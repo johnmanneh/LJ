@@ -2,14 +2,14 @@ import React from 'react';
 
 interface ButtonProps{
     label: string;
-    btnType: string;
+    btnClass: string;
     btnClick: () =>void;
 
 }
-function Button({label,btnType,btnClick}:ButtonProps) {
+function Button({label,btnClass,btnClick}:ButtonProps) {
     return (
         <>
-        <button className={btnType} type="button" onClick ={btnClick}>{label}</button>
+        <button className={btnClass} type="button" onClick ={btnClick}>{label}</button>
         </>
     )
 }
