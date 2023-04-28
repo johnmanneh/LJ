@@ -33,3 +33,5 @@ commands
                                 In other to run in the network, one hast to
                                 configure the package.json)
                                 "host": "vite --host
+
+        git checkout -b <branch-name>
