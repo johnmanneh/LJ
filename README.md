@@ -12,21 +12,10 @@ We create react app with VIT.
 Vit is a framework that lets us create any type of JavaScript framework
 eg VanillaJS,Vue,React,Preact etc
 
-We create a react application with the following commands:
-
-        npm create vite@latest
-        select-option :  react
-        select-option :  TypeScript
-
-
-
-For cloning, a separate phasekey will be provided. 
-
-
-After cloning is done, navigate to the desired folder and run these 
-commands
+clone repository to have access to dev app
 
         cd /your folder
+        git checkout -b <your branch name>
         npm install ( this install all the third party libraries)
         npm run dev ( to run the developer server)
         npm run dev -- --host ( Running the server over the network
