@@ -31,7 +31,7 @@ function ListCountry({ data, search }: listProps) {
       ));
     }
   };
-  return <>{searchRender()}</>;
+  return <>{!match && searchRender()}</>;
 }
 
 export default ListCountry;
