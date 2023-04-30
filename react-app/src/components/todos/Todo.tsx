@@ -7,14 +7,15 @@ import List from "../countries/ListCountry";
 function Todo() {
   const [search, setSearch] = useState("");
   const [country, setCountry] = useState([]);
-  let todoBtn = "todo test";
-  const btnClick = () => {
-    console.log(search);
-    setSearch("");
-  };
+  let todoBtn = "search ";
   const handleInputField = (event: string) => {
-    setSearch(event);
+    setSearch(event)
+    console.log(search)
   };
+  const btnClick = () => {
+    
+  };
+  
   const handleCountryRes = res => {
     
    if (res.status === 200){
@@ -25,12 +26,13 @@ function Todo() {
 
   return (
     <>
+      
+      <Input handleEvent={handleInputField} value={search} />
       <Button
         label={todoBtn}
         btnClass={"btn btn-primary"}
         btnClick={btnClick}
       />
-      <Input handleEvent={handleInputField} value={search} />
       <Country sendToCaller={handleCountryRes} />
       <List data={country} search={search}/>
     </>
