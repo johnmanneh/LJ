@@ -3,7 +3,7 @@ import Button from "../button/Button";
 
 interface TodoProps {
   todo: [];
-  btnClick :()=>void;
+  btnClick :(id:number)=>void;
 }
 
 function TodoList({ todo,btnClick }: TodoProps) {
@@ -12,11 +12,11 @@ function TodoList({ todo,btnClick }: TodoProps) {
       {todo.map((e, i) => (
         <ol key={i}>
           {e}
-          
+          <span></span>
           <Button
             label="Delete"
             btnClass={"btn btn-danger"}
-            btnClick={btnClick}
+            btnClick={()=>btnClick(i)}
           />
         </ol>
       ))}

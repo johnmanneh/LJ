@@ -7,6 +7,8 @@ import Todos from "../todos/TodoList";
 
 function Todo() {
   const [todo, setTodo] = useState([]);
+  const [todoInput, setTodoInput] = useState("");
+
   const [search, setSearch] = useState("");
   const [country, setCountry] = useState([]);
   let todoBtn = "search ";
@@ -23,15 +25,28 @@ function Todo() {
     }
   };
 
+  const AddTodoItem =()=>{
+    setTodo([...todo,todoInput]);
+    setTodoInput('');
+  }
+  const removeTodoItem =(id:number)=>{
+   const rmv =  todo.filter((e,i)=> i !== id)
+    console.log(rmv)
+    setTodo(rmv);
+  }
+  const handleTodoInput =(e:string)=>{
+    setTodoInput(e);
+  }
+
   return (
     <>
-      <Input handleEvent={handleInputField} value={search} />
+      <Input handleEvent={handleTodoInput} value={todoInput} />
       <Button
             label="ADD"
             btnClass={"btn btn-primary"}
-            btnClick={btnClick}
+            btnClick={AddTodoItem}
           />  
-     <Todos todo ={todo}/>
+     <Todos todo ={todo} btnClick={removeTodoItem}/>
 <br/>
       <Input handleEvent={handleInputField} value={search} />
       <Button
