@@ -26,8 +26,10 @@ function Todo() {
   };
 
   const AddTodoItem =()=>{
-    setTodo([...todo,todoInput]);
-    setTodoInput('');
+    if (todoInput != ''){
+      setTodo([...todo,todoInput]);
+      setTodoInput('');
+    }
   }
   const removeTodoItem =(id:number)=>{
    const rmv =  todo.filter((e,i)=> i !== id)
@@ -37,9 +39,23 @@ function Todo() {
   const handleTodoInput =(e:string)=>{
     setTodoInput(e);
   }
+  const todoStyle = {
+    display: 'flex',
+    justifyContent: 'center',
+    width : '50%',
+    flexDirection: 'column',
+    alignItem :'center',
+    border: "1px #0af solid",
+    borderRadius: 9,
+    margin: 20,
+    backgroundColor: "#efefef",
+    padding: 6
+  };
 
   return (
     <>
+    <div style={todoStyle}>
+      <h1>Todo</h1>
       <Input handleEvent={handleTodoInput} value={todoInput} />
       <Button
             label="ADD"
@@ -47,6 +63,7 @@ function Todo() {
             btnClick={AddTodoItem}
           />  
      <Todos todo ={todo} btnClick={removeTodoItem}/>
+     </div>
 <br/>
       <Input handleEvent={handleInputField} value={search} />
       <Button
