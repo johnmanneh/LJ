@@ -55,24 +55,28 @@ function Todo() {
   return (
     <>
     <div style={todoStyle}>
-      <h1>Todo</h1>
+      <h1>假期的东西</h1>
       <Input handleEvent={handleTodoInput} value={todoInput} />
       <Button
-            label="ADD"
+            label="加入"
             btnClass={"btn btn-primary"}
             btnClick={AddTodoItem}
           />  
      <Todos todo ={todo} btnClick={removeTodoItem}/>
      </div>
 <br/>
+{ /*
       <Input handleEvent={handleInputField} value={search} />
       <Button
         label={todoBtn}
         btnClass={"btn btn-primary"}
         btnClick={btnClick}
-      />
-      <Country sendToCaller={handleCountryRes} />
-      <List data={country} search={search} />
+      /> 
+     
+     <Country sendToCaller={handleCountryRes} />
+      <List data={country} search={search} /> 
+*/
+      }
     </>
   );
 }

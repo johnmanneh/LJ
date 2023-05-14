@@ -10,7 +10,7 @@ function TodoList({ todo,btnClick }: TodoProps) {
   const todoStyle = {
     display: 'flex',
     justifyContent: 'center',
-    width :'30%',
+    width :'70%',
     border: "1px #0af dashed",
     borderRadius: 9,
     margin: 10,
@@ -24,12 +24,13 @@ function TodoList({ todo,btnClick }: TodoProps) {
           {e}
           <span></span>
           <Button
-            label="Delete"
+            label="删"
             btnClass={"btn btn-danger"}
             btnClick={()=>btnClick(i)}
           />
         </ol>
       ))}
+      
     </>
   );
 }
